@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-cliente',
@@ -12,9 +13,15 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CreateClientePage implements OnInit {
 
-  constructor() { }
+  nome = '';
+  Email = '';
+  senha = ''; 
+  confirmarsenha = '';
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
+
   }
 
 }
