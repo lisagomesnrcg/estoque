@@ -14,7 +14,10 @@ export class ClientesService {
   constructor(private http: HttpClient, private alertCtrl: AlertController) { }
 
   create(cliente: Cliente) {
-    return this.http.post(this.url, cliente);
+    return this.http.post<Cliente>(this.url, cliente).pipe(
+    map(retorno => retorno),
+    catchError(erro => this.exiberErro(erro))
+    );
   }
 
   getAll():Observable<Cliente[]> {
