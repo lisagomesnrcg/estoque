@@ -20,10 +20,22 @@ export class HomePage {
     this.buscarClientes();
   }
 
+  ionViewWillEnter(){
+    this.buscarClientes();
+  }
+
   buscarClientes() {
 
     this.clientesService.getAll().subscribe(dados => {
       this.listaClientes = dados as Cliente[];
     })
+  }
+
+  alterarcliente(id: number) {
+    this.router.navigateByUrl(`/alterar-cliente/${id}`);
+  }
+
+  excluircliente(id: number){
+
   }
 }

@@ -11,6 +11,11 @@
     <ion-label>
       {{cliente.nome}}
     </ion-label>
+    <ion-button color="warning" (click)="alterarcliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="excluircliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
   </ion-item>
 
 
