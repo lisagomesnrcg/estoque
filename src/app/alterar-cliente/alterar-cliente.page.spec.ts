@@ -15,3 +15,4 @@ describe('AlterarClientePage', () => {
     expect(component).toBeTruthy();
   });
 });
+

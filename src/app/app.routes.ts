@@ -18,5 +18,4 @@ export const routes: Routes = [
     path: 'alterar-cliente/:id',
     loadComponent: () => import('./alterar-cliente/alterar-cliente.page').then( m => m.AlterarClientePage)
   },
-
 ];

@@ -1,28 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>create-cliente</ion-title>
+    <ion-title>Add Cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-input type="text" fill="outline" label="Nome" labelPlacement="floating"
-   helperText="Digite o nome copreto" [(ngModel)]="nome"></ion-input>
-    <br>
-    <ion-input type="email" fill="outline" label="E-mail" labelPlacement="floating"
-    helperText="Acerte pelo menos isso" [(ngModel)]="email"></ion-input>
-    <br>
-    <ion-input type="password" fill="outline" label="Senha" labelPlacement="floating"
-    helperText="Não coloque 1234." [(ngModel)]="senha"
-      minlength="4"></ion-input>
-    <br>
-    <ion-input type="password" fill="outline" label="Confirme a senha" labelPlacement="floating"
-    helperText="igual a de cima socó." [(ngModel)]="confirmaSenha" minlength="4"></ion-input>
+    helperText="Digite o nome copreto" [(ngModel)]="nome"></ion-input>
+  <br>
+  <ion-input type="email" fill="outline" label="E-mail" labelPlacement="floating"
+    helperText="Acerta pelo menos isso." [(ngModel)]="email"></ion-input>
+  <br>
+  <ion-input type="password" fill="outline" label="Senha" labelPlacement="floating"
+  helperText="Não coloque 1234." [(ngModel)]="senha"
+    minlength="4"></ion-input>
+  <br>
+  <ion-input type="password" fill="outline" label="Confirme a senha" labelPlacement="floating"
+    helperText="Igual o de cima socó." [(ngModel)]="confirmaSenha" minlength="4"></ion-input>
 
-    <br>
+  <br>
 
-    <ion-button expand="block">
-      SALVAR
-    </ion-button>
+  <ion-button expand="block" (click)="salvar()">
+    SALVAR
+  </ion-button>
 
 </ion-content>
 

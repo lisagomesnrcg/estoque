@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { ClientesService } from '../services/clientes.service';
 import { Cliente } from '../models/Cliente.model';
+import { ClientesService } from '../services/clientes.service';
 
 @Component({
   selector: 'app-create-cliente',
@@ -16,36 +16,33 @@ import { Cliente } from '../models/Cliente.model';
 export class CreateClientePage implements OnInit {
 
   nome = '';
-  Email = '';
-  senha = ''; 
-  confirmarsenha = '';
+  email = '';
+  senha = '';
+  confirmaSenha = '';
 
   constructor(private route: Router, private clientesService: ClientesService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  salvar(){
-    if (this.senha === this.confirmarsenha){
-      const cliente:Cliente = {
+
+  salvar() {
+    if (this.senha === this.confirmaSenha) {
+      const cliente: Cliente = {
         nome: this.nome,
         email: this.email,
         senha: this.senha
       }
-      this.clientesService.create(cliente).subscribe(dados =. {
-        alert('Cliente inserido com sucesso:' + dados.id)
-        //navegação vem aqui!
+      this.clientesService.create(cliente).subscribe(dados => {
+        alert('Cliente inserido com sucesso: ' + dados.id)
+        // navegação vem aqui!
         this.route.navigateByUrl('/home');
         //this.route.navigate(['/home']);
       });
 
-       //Nunca colocar a navegação fora... vai voltar sem saber a resposta
-      }else{
-        alert('Senhas não conferem.')
-      }  
+      //Nunca colocar a navegação fora... vai voltar sem saber a reposta
+    } else {
+      alert('Senhas não conferem.')
     }
   }
 
-     
-   
-
-
+}

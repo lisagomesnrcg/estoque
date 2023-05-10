@@ -11,15 +11,15 @@
     <ion-label>
       {{cliente.nome}}
     </ion-label>
-    <ion-button color="warning" (click)="alterarcliente(cliente.id!)">
+    <ion-button color="warning" (click)="alterarCliente(cliente.id!)">
       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
     </ion-button>
-    <ion-button color="danger" (click)="excluircliente(cliente.id!)">
+    <ion-button color="danger" (click)="excluirCliente(cliente.id!)">
       <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
   </ion-item>
 
-
-  <ion-button routerLink="/create-client">
+  <ion-button routerLink="/create-cliente">
     Adicionar Cliente
-</ion-button>
+  </ion-button>
 </ion-content>
